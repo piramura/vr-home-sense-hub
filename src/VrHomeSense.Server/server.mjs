@@ -93,6 +93,7 @@ app.post("/api/room/:roomId", (req, res) => {
 app.get("/api/room/:roomId", (req, res) => {
   const roomId = req.params.roomId;
   const state = roomStore.get(roomId);
+  console.log("[GET]", roomId, state ? "HIT" : "MISS");
   if (!state) return res.sendStatus(404);
   return res.json(state);
 });

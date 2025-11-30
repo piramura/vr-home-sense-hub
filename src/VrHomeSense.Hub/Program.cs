@@ -48,12 +48,13 @@ namespace VrHomeSense.Hub
         public static string ServerBaseUrl =>
             _config["Hub:ServerBaseUrl"]
             ?? _config["HUB_SERVER_BASE_URL"]
-            ?? "http://localhost:5000"; // デフォルト
+            ?? "https://vr-home-sense-hub.onrender.com"; // デフォルト
     }
 
     // 3) クラウド(サーバ)に送信するクラス
     public static class Uploader
     {
+        
         private static readonly HttpClient _client = new HttpClient();
 
         // ここは固定IDでOK（部屋ID）
@@ -108,6 +109,9 @@ namespace VrHomeSense.Hub
 
     internal class Program
     {
+        // ★ アップロード間隔（30秒ごとに1回）
+        private static DateTime _lastUpload = DateTime.MinValue;
+        private static readonly TimeSpan UploadInterval = TimeSpan.FromSeconds(30);
         static void Main(string[] args)
         {
             Console.WriteLine("VrHomeSense Hub: BLEスキャン → クラウドPOST");
@@ -182,8 +186,12 @@ namespace VrHomeSense.Hub
                     };
                 }
 
-                // 保存した最新状態を、そのままクラウドに送る
-                Uploader.Send(snapshot);
+                // ★ 一定間隔ごとにだけ送信
+                if (DateTime.Now - _lastUpload >= UploadInterval)
+                {
+                    _lastUpload = DateTime.Now;
+                    Uploader.Send(snapshot);
+                }
             }
         }
     }
