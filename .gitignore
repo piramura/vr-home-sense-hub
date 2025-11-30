@@ -1,0 +1,3 @@
+appsettings.Local.json
+src\VrHomeSense.Hub\appsettings.Local.json
+src\VrHomeSense.Server\appsettings.Local.json
