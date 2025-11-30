@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("VrHomeSense.Hub")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+7f04895a24244142dd8228af6db85b1f6a281d66")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+4d8380a349998edb8b7e0bdbdee9f8cb331e1536")]
 [assembly: System.Reflection.AssemblyProductAttribute("VrHomeSense.Hub")]
 [assembly: System.Reflection.AssemblyTitleAttribute("VrHomeSense.Hub")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

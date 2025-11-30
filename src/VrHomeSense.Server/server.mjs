@@ -95,7 +95,11 @@ app.get("/api/room/:roomId", (req, res) => {
   const state = roomStore.get(roomId);
   console.log("[GET]", roomId, state ? "HIT" : "MISS");
   if (!state) return res.sendStatus(404);
-  return res.json(state);
+  // 例: "693,21.8,42" （CO2, 温度, 湿度）
+  const line = `${state.co2Ppm},${state.temperature},${state.humidity}`;
+
+  res.setHeader("Content-Type", "text/plain; charset=utf-8");
+  return res.send(line);
 });
 
 // Render では PORT が環境変数で渡される
