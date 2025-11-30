@@ -43,3 +43,4 @@ C:\Users\kesun\vr-home-sense-hub\src\VrHomeSense.Hub\bin\Debug\net10.0-windows10
 C:\Users\kesun\vr-home-sense-hub\src\VrHomeSense.Hub\bin\Debug\net10.0-windows10.0.22000.0\Microsoft.Extensions.FileSystemGlobbing.dll
 C:\Users\kesun\vr-home-sense-hub\src\VrHomeSense.Hub\bin\Debug\net10.0-windows10.0.22000.0\Microsoft.Extensions.Primitives.dll
 C:\Users\kesun\vr-home-sense-hub\src\VrHomeSense.Hub\bin\Debug\net10.0-windows10.0.22000.0\appsettings.Local.json
+C:\Users\kesun\vr-home-sense-hub\src\VrHomeSense.Hub\obj\Debug\net10.0-windows10.0.22000.0\VrHomeSense.Hub.sourcelink.json

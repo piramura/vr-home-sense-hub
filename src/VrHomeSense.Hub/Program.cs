@@ -57,7 +57,7 @@ namespace VrHomeSense.Hub
         private static readonly HttpClient _client = new HttpClient();
 
         // ここは固定IDでOK（部屋ID）
-        private const string RoomId = "kounosuke-room";
+        private const string RoomId = "piramura-room";
 
         public static async void Send(RoomEnvironmentState state)
         {
